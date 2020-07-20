@@ -1,0 +1,127 @@
+.blogs {
+  position: relative;
+  top: -50px;
+
+  min-height: 583px;
+
+  background-image: url("../img/blogs@1x.png");
+  background-size: 1361px 583px;
+  background-repeat: no-repeat;
+  background-position: right 0 top 0;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/blogs@2x.png");
+  }
+}
+
+.blogs__container {
+  margin: 0 auto;
+  max-width: 1366px;
+
+  padding-top: 120px;
+  padding-right: 167px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.blogs__content-wrapper {
+  width: 403px;
+}
+
+.blogs__content-wrapper h2 {
+  margin-bottom: 25px;
+}
+
+.blogs__content-wrapper p {
+  @include big-lh-170;
+
+  margin-left: 2px;
+  margin-bottom: 45px;
+
+  color: $white;
+  text-shadow: $text-shadow;
+  opacity: 0.87;
+}
+
+.blogs__content-wrapper button {
+  @include form-btn;
+
+  line-height: 56px;
+  width: 230px;
+
+  &::before {
+    content: url("../img/icon-btn-insta.svg");
+    position: relative;
+    top: 7px;
+
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .blogs {
+    background-position: right -200px top 0;
+  }
+
+  .blogs__container {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .blogs {
+    top: 0;
+
+    min-height: 480px;
+
+    background-size: 632px 272px;
+    background-position: left -69px top 69px;
+  }
+
+  .blogs__container {
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  .blogs__content-wrapper {
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    margin-left: 0;
+
+    padding-top: 25px;
+  }
+
+  .blogs__content-wrapper h2 {
+    font-size: 40px;
+    line-height: 49px;
+
+    margin-left: -3px;
+    margin-bottom: 95px;
+
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .blogs__content-wrapper p {
+
+    font-size: 16px;
+    line-height: 26px;
+
+    margin-bottom: 58px;
+
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .blogs__content-wrapper button {
+    width: 264px;
+  }
+}

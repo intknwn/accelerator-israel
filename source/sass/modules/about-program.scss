@@ -1,0 +1,165 @@
+.about-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 16px;
+  padding-bottom: 96px;
+
+  background-image: url("../img/about-bg@1x.png");
+  background-size: 1366px 604px;
+  background-repeat: no-repeat;
+  background-position: right 175px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-bg@2x.png");
+  }
+}
+
+.about-program h2 {
+  margin-bottom: 24px;
+}
+
+.about-program p {
+  @include big-lh-170;
+  width: 720px;
+
+  margin-bottom: 49px;
+
+  text-align: center;
+}
+
+.about-program__video-player {
+  position: relative;
+  width: 100%;
+  max-width: 870px;
+}
+
+.about-program__video-player img {
+  width: 100%;
+  height: auto;
+}
+
+.about-program__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-top: -54px;
+  margin-left: -48px;
+
+  width: 96px;
+  height: 96px;
+
+  border: none;
+  background-color: transparent;
+
+  outline: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 96px;
+    height: 96px;
+
+    background: $white;
+    opacity: 0.32;
+
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin-top: -32px;
+    margin-left: -32px;
+
+    display: block;
+    width: 64px;
+    height: 64px;
+
+    background-color: $white;
+    border-radius: 50%;
+    background-image: url("../img/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: 27px 50%;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      background-image: url("../img/icon-play-hover.svg");
+      box-shadow: $icon-shadow;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about-program {
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    background-size: 420px 186px;
+    background-repeat: no-repeat;
+    background-position: right -50px top 245px;
+  }
+
+  .about-program p {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding-right: 16px;
+    padding-left: 16px;
+
+    margin-bottom: 48px;
+
+    text-align: left;
+
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .about-program__play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin-top: -35px;
+    margin-left: -40px;
+
+    width: 80px;
+    height: 80px;
+
+    border: none;
+    background-color: transparent;
+
+    outline: none;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      margin-top: -26.5px;
+      margin-left: -26.5px;
+
+      width: 53px;
+      height: 53px;
+
+      background-position: 22px 50%;
+      background-size: 12.5px 15.8px;
+    }
+  }
+}

@@ -2,7 +2,8 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+  src: local("Montserrat Regular"),
+    local("Montserrat-Regular"),
     url("../fonts/montserrat-v14-latin_cyrillic-regular.woff2") format("woff2"),
     url("../fonts/montserrat-v14-latin_cyrillic-regular.woff") format("woff");
 }
@@ -11,7 +12,8 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+  src: local("Montserrat Bold"),
+    local("Montserrat-Bold"),
     url("../fonts/montserrat-v14-latin_cyrillic-700.woff2") format("woff2"),
     url("../fonts/montserrat-v14-latin_cyrillic-700.woff") format("woff");
 }
@@ -20,7 +22,8 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
-  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"),
+  src: local("Montserrat ExtraBold"),
+    local("Montserrat-ExtraBold"),
     url("../fonts/montserrat-v14-latin_cyrillic-800.woff2") format("woff2"),
     url("../fonts/montserrat-v14-latin_cyrillic-800.woff") format("woff");
 }
@@ -29,7 +32,8 @@
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;
-  src: local("Fira Sans Regular"), local("FiraSans-Regular"),
+  src: local("Fira Sans Regular"),
+    local("FiraSans-Regular"),
     url("../fonts/fira-sans-v10-latin_cyrillic-regular.woff2") format("woff2"),
     url("../fonts/fira-sans-v10-latin_cyrillic-regular.woff") format("woff");
 }
@@ -37,8 +41,19 @@
 @font-face {
   font-family: "Fira Sans";
   font-style: normal;
+  font-weight: 500;
+  src: local("Fira Sans Medium"),
+    local("FiraSans-Medium"),
+    url("../fonts/fira-sans-v10-latin_cyrillic-500.woff2") format("woff2"),
+    url("../fonts/fira-sans-v10-latin_cyrillic-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
   font-weight: 700;
-  src: local("Fira Sans Bold"), local("FiraSans-Bold"),
+  src: local("Fira Sans Bold"),
+    local("FiraSans-Bold"),
     url("../fonts/fira-sans-v10-latin_cyrillic-700.woff2") format("woff2"),
     url("../fonts/fira-sans-v10-latin_cyrillic-700.woff") format("woff");
 }
@@ -47,7 +62,8 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: local("Raleway ExtraBold"), local("Raleway-ExtraBold"),
+  src: local("Raleway ExtraBold"),
+    local("Raleway-ExtraBold"),
     url("../fonts/raleway-v3-latin_cyrillic-800.woff2") format("woff2"),
     url("../fonts/raleway-v3-latin_cyrillic-800.woff") format("woff");
 }

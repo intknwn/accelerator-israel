@@ -1,10 +1,23 @@
 $mobile-width: 767px;
-$tablet-width: 1023px;
+$tablet-width: 1365px;
+$desktop-width: 1366px;
 
 $retina-dppx: 1.5dppx;
 
 $black: #484848;
 $blue: #1fc0fc;
 $yellow: #ffc341;
+$white: #ffffff;
+
+$icon-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+$text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+$bubble-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+$caption-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+$modal-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 
 $gradient: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+$hover-gradient: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
+$active-gradient: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), $gradient;
+
+$valid-color: #484848;
+$invalid-color: #ff0000;

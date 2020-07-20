@@ -1,0 +1,39 @@
+.form input {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 59px;
+
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 59px;
+  font-variant: small-caps;
+  color: $black;
+
+  padding: 0;
+  padding-left: 40px;
+
+  border: 2px solid #e3e3e3;
+  border-radius: 30px;
+
+  outline: none;
+}
+
+.form input:focus {
+  border-color: $yellow;
+}
+
+.form input:valid {
+  border-color: $yellow;
+}
+
+.form input::placeholder {
+  @include placeholder;
+
+  line-height: 59px;
+}
+
+.form button {
+  @include form-btn;
+}

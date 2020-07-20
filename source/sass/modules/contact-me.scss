@@ -1,0 +1,117 @@
+.contact-me {
+  background-image: url("../img/wannago-backpack-bg@1x.png");
+  background-size: 147px 262px;
+  background-repeat: no-repeat;
+  background-position: left 145px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/wannago-backpack-bg@2x.png");
+  }
+}
+
+.contact-me__container {
+  margin: 0 auto;
+  max-width: 1156px;
+
+  padding-top: 220px;
+  padding-bottom: 131px;
+  padding-left: 210px;
+
+  background-image: url("../img/wannago-flag@1x.png");
+  background-size: 818px 594px;
+  background-repeat: no-repeat;
+  background-position: right 11px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/wannago-flag@2x.png");
+  }
+}
+
+.contact-me__container h2 {
+  margin-bottom: 28px;
+}
+
+.contact-me__container p {
+  @include regular-lh-170;
+
+  font-size: 16px;
+  letter-spacing: 0.033em;
+  max-width: 400px;
+  margin-bottom: 67px;
+}
+
+.contact-me__form {
+  position: relative;
+  max-width: 477px;
+}
+
+.contact-me__form button {
+  @include form-btn;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 216px;
+}
+
+@media (max-width: $tablet-width) {
+  .contact-me__container {
+    padding-left: 140px;
+
+    background-size: 60%;
+    background-position: right bottom;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contact-me {
+    background-image: none;
+  }
+
+  .contact-me__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 35px;
+    padding-right: 17px;
+    padding-bottom: 308px;
+    padding-left: 17px;
+
+    background-size: 424px 308px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .contact-me__container h2 {
+    margin-bottom: 24px;
+  }
+
+  .contact-me__container p {
+    margin-bottom: 24px;
+
+    max-width: 355px;
+
+    line-height: 26px;
+    letter-spacing: -0.001em;
+  }
+
+  .contact-me__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-me__form input {
+    min-width: 287px;
+    margin-bottom: 8px;
+  }
+
+  .contact-me__form button {
+    position: static;
+
+    width: 264px;
+  }
+}
+

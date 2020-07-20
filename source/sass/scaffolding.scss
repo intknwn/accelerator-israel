@@ -3,9 +3,11 @@ body {
   padding: 0;
 
   font-family: "Fira Sans", sans-serif;
+  color: $black;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
 
@@ -28,4 +30,8 @@ p {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+button {
+  padding: 0;
 }

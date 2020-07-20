@@ -2,7 +2,7 @@
   font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 29px;
 }
 
@@ -11,12 +11,13 @@
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
-  line-height: 170%;
+  line-height: 26px;
 }
 
 @mixin big-lh-170 {
   @include regular-lh-170;
   font-size: 17px;
+  line-height: 29px;
 }
 
 @mixin regular-lh-150 {
@@ -24,13 +25,13 @@
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
-  line-height: 140%;
+  line-height: 25px;
 }
 
 @mixin big-lh-150 {
   @include regular-lh-150;
   font-size: 17px;
-  line-height: 150%;
+  line-height: 25px;
 }
 
 @mixin small {
@@ -38,7 +39,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
-  line-height: 150%;
+  line-height: 19px;
 }
 
 @mixin promo {
@@ -53,12 +54,12 @@
   font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 20px;
   font-variant: small-caps;
+  text-transform: uppercase;
 
-  color: $black;
-  opacity: 0.5;
+  color: rgba($black, 0.5);
 }
 
 @mixin btn {
@@ -68,7 +69,40 @@
   font-size: 17px;
   line-height: 20px;
   font-variant: small-caps;
+  text-transform: uppercase;
 
   color: $black;
   opacity: 0.87;
+}
+
+@mixin form-btn {
+  box-sizing: border-box;
+
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 59px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+
+  height: 59px;
+
+  border: none;
+  border-radius: 30px;
+  background: $gradient;
+
+  color: $white;
+  text-shadow: $text-shadow;
+
+  &:hover,
+  &:focus {
+    background: $hover-gradient;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:active {
+    background: $active-gradient;
+  }
 }

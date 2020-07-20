@@ -1,0 +1,204 @@
+.israel-life {
+  position: relative;
+  top: -137px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 50px;
+
+  background-image:
+    url("../img/life-bg@1x.png"),
+    url("../img/life-compass-bg@1x.png");
+  background-size:
+    1366px 950px,
+    90px 148px;
+  background-repeat: no-repeat;
+  background-position:
+    left 50% top -43px,
+    right 0 bottom 155px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/life-bg@2x.png"),
+      url("../img/life-compass-bg@2x.png");
+  }
+}
+
+.israel-life__slider {
+  display: none;
+}
+
+.israel-life__br {
+  display: none;
+}
+
+.israel-life h2 {
+  margin-bottom: 25px;
+}
+
+.israel-life p {
+  @include big-lh-170;
+
+  max-width: 720px;
+
+  margin-left: -20px;
+
+  text-align: right;
+}
+
+.israel-life__features {
+  position: relative;
+  top: -20px;
+  left: -5px;
+
+  max-width: 1162px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.israel-life__feature {
+  position: relative;
+
+  margin: 0;
+
+  &--full {
+    margin-right: 15px;
+  }
+}
+
+
+.israel-life__feature figcaption {
+  position: absolute;
+
+  bottom: 32px;
+  left: 24px;
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 25px;
+
+  color: $white;
+
+  text-shadow: $caption-shadow;
+}
+
+.israel-life__feature--big figcaption {
+  left: 35px;
+}
+
+.israel-life__feature--full figcaption {
+  left: 40px;
+  bottom: 5%;
+}
+
+.israel-life__feature-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 68px;
+
+  max-width: 652px;
+  min-width: 500px;
+  width: 100%;
+}
+
+.israel-life__top-group,
+.israel-life__bottom-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.israel-life__top-group {
+  margin-bottom: 30px;
+}
+
+.israel-life__feature-wrapper .israel-life__feature {
+  max-height: 318px;
+}
+
+.israel-life__feature img {
+  width: 100%;
+  height: auto;
+}
+
+.israel-life__feature-wrapper .israel-life__feature:nth-child(odd) {
+  padding-right: 25px;
+}
+
+.israel-life__feature--full img {
+  width: 482px;
+}
+
+@media (max-width: $mobile-width) {
+  .israel-life {
+    top: 0;
+
+    background-image: none;
+  }
+
+  .israel-life__slider {
+    display: block;
+  }
+
+  .israel-life__br {
+    display: inline;
+  }
+
+  .israel-life h2 {
+    text-align: center;
+  }
+
+  .israel-life p {
+    margin-left: 0;
+    margin-bottom: 23px;
+
+    padding-right: 16px;
+    padding-left: 16px;
+
+    text-align: left;
+
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .israel-life__features {
+    display: none;
+  }
+
+  .israel-life__slide {
+    margin: 0;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .israel-life__slide figcaption {
+    position: absolute;
+
+    width: 256px;
+
+    bottom: 44px;
+
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    color: $white;
+
+    text-shadow: $caption-shadow;
+  }
+}

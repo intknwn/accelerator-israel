@@ -1,0 +1,55 @@
+.programs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 99px;
+
+  background-image: url("../img/programs-bg@1x.png");
+  background-size: 680px 426px;
+  background-repeat: no-repeat;
+  background-position: right 52px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs-bg@2x.png");
+  }
+}
+
+.programs__container {
+  padding-right: 95px;
+
+  max-width: 972px;
+}
+
+.programs__container h2 {
+  margin-bottom: 67px;
+}
+
+@media (max-width: $tablet-width) {
+  .programs__container h2 {
+    padding-left: 35px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .programs {
+    padding-top: 30px;
+  }
+
+  .programs__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-right: 0;
+    padding-bottom: 30px;
+
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .programs__container h2 {
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+}

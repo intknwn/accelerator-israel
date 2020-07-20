@@ -1,0 +1,109 @@
+.success-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  max-width: 480px;
+  min-height: 521px;
+
+  margin-left: -240px;
+  margin-top: -260px;
+
+  padding-top: 216px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  background-color: $white;
+  background-image: url("../img/icon-success.svg");
+  background-repeat: no-repeat;
+  background-position: left 50% top 120px;
+
+  border-radius: 8px;
+  box-shadow: $modal-shadow;
+}
+
+.success-modal h2 {
+  margin-bottom: 16px;
+
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+
+  text-transform: none;
+}
+
+.success-modal p {
+  @include regular-lh-170;
+
+  margin-bottom: 32px;
+
+  text-align: center;
+}
+
+.success-modal .success-modal__close-btn {
+  @include form-btn;
+
+  width: 264px;
+}
+
+@media (max-width: $mobile-width) {
+  .success-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    left: 0;
+    top: 0;
+
+    max-width: 100%;
+    min-height: 100vh;
+
+    margin-left: 0;
+    margin-top: 0;
+
+    padding-top: 0;
+    padding-right: 16px;
+    padding-bottom: 0;
+    padding-left: 16px;
+
+    background-color: $white;
+    border-radius: 0;
+    box-shadow: $modal-shadow;
+
+    background-position: left 50% top 200px;
+  }
+
+  .success-modal h2 {
+    margin-top: 5px;
+    margin-bottom: 18px;
+
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.02em;
+  }
+
+  .success-modal p {
+    margin-bottom: 29px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .mfp-content {
+    position: static;
+  }
+
+  .mfp-close {
+    top: 24px;
+    right: 24px;
+  }
+}

@@ -1,0 +1,27 @@
+.social {
+  display: flex;
+  flex-direction: row;
+}
+
+.social__item {
+  margin-right: 16px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__link {
+  outline: none;
+
+  &:hover .social__logo,
+  &:focus .social__logo {
+    fill: $blue;
+    opacity: 1;
+  }
+}
+
+.social__logo {
+  fill: $black;
+  opacity: 0.2;
+}
