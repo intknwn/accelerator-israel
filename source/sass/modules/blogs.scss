@@ -52,11 +52,22 @@
   width: 230px;
 
   &::before {
-    content: url("../img/icon-btn-insta.svg");
+    content: "";
     position: relative;
     top: 7px;
 
+    display: inline-block;
+    vertical-align: baseline;
+
+    width: 24px;
+    height: 24px;
+
     margin-right: 10px;
+
+    background-image: url("../img/icon-btn-insta.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center;
   }
 }
 
