@@ -3,7 +3,7 @@
 (function () {
   var swiper = new Swiper('.israel-life__slider', {
     pagination: {
-      el: '.swiper-pagination',
+      el: '.israel-life__pagination',
     },
   });
 })();
@@ -24,25 +24,40 @@
     $('.callback-modal__form, .contact-me__form, .details__form').on('submit', function (evt) {
       evt.preventDefault();
 
-      var formData = new FormData(evt.target);
+      var form = evt.target;
+      form.noValidate = true;
 
-      if (formData.has('name')) {
-        localStorage.setItem('name', formData.get('name'));
+      var phoneInput = form.querySelector('input[name="phone"]');
+
+      var formData = new FormData(form);
+      var nameValue = formData.get('name');
+      var phoneValue = formData.get('phone');
+
+      if (phoneValue.includes('_')) {
+        phoneInput.setCustomValidity('Пожалуйста, укажите Ваш номер телефона согласно шаблону');
+      } else {
+        phoneInput.setCustomValidity('');
       }
 
-      if (formData.has('phone')) {
-        localStorage.setItem('phone', formData.get('phone'));
-      }
+      if (form.checkValidity()) {
+        $.magnificPopup.open({
+          items: [{
+            src: '.success-modal',
+            type: 'inline',
+            midClick: true,
+            closeBtnInside: true,
+            preloader: false,
+          }]
+        });
 
-      $.magnificPopup.open({
-        items: [{
-          src: '.success-modal',
-          type: 'inline',
-          midClick: true,
-          closeBtnInside: true,
-          preloader: false,
-        }]
-      });
+        if (nameValue) {
+          localStorage.setItem('name', nameValue);
+        }
+
+        localStorage.setItem('phone', phoneValue);
+      } else {
+        form.reportValidity();
+      }
     });
 
     $('.success-modal__close-btn').on('click', function () {

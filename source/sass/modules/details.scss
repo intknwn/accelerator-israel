@@ -170,25 +170,6 @@
   position: absolute;
   top: 5px;
   right: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-
-    width: 18px;
-    height: 28px;
-
-    top: 230px;
-    right: 165px;
-
-    background-image: url("../img/map-pin@1x.png");
-    background-size: 18px 28px;
-    background-position: center;
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/map-pin@2x.png");
-    }
-  }
 }
 
 .details__form-wrapper {
@@ -240,9 +221,17 @@
   .details__map-wrapper {
     align-self: flex-start;
     position: relative;
-    width: 702px;
+
+    left: -40px;
+
+    max-width: 702px;
 
     margin-bottom: 20px;
+  }
+
+  .details__map {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -258,7 +247,6 @@
     margin-left: 0;
 
     padding-left: 0;
-
   }
 
   .details__container h2 {
@@ -269,22 +257,15 @@
 
   .details__map-wrapper {
     position: relative;
+    left: 0;
+
+    align-self: center;
 
     margin-bottom: 21px;
-
-    &::before {
-      top: 205px;
-      right: 30px;
-
-      width: 26px;
-      height: 40px;
-
-      background-size: 26px 40px;
-    }
   }
 
   .details__map {
-    width: 100%;
+    width: 320px;
     height: 420px;
   }
 

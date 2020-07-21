@@ -1,0 +1,32 @@
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-container-horizontal {
+  padding-bottom: 10px;
+}
+
+.swiper-container-horizontal > .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+
+  height: 20px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+  width: 8px;
+  height: 8px;
+
+  background: $gradient;
+}
