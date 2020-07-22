@@ -98,7 +98,7 @@ gulp.task(`copy`, () => {
 gulp.task(`js`, () => {
   return gulp.src(`source/js/index.js`)
       .pipe(plumber())
-      .pipe(webpackStream(webpackConfig), webpack)
+      .pipe(webpackStream(webpackConfig, webpack))
       .pipe(gulp.dest(`./build/js`));
 });
 
