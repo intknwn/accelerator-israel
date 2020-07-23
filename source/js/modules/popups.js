@@ -21,17 +21,48 @@ export default () => {
       const form = evt.target;
       form.noValidate = true;
 
-      const phoneInput = form.querySelector(`input[name="phone"]`);
+      const nameInput = form.querySelector(`input[name='name']`);
+      const phoneInput = form.querySelector(`input[type='tel']`);
+      const nameErrorTip = form.querySelector(`.error-msg-tip--name`);
+      const phoneErrorTip = form.querySelector(`.error-msg-tip--phone`);
 
       const formData = new FormData(form);
       const nameValue = formData.get(`name`);
       const phoneValue = formData.get(`phone`);
 
-      if (phoneValue.includes(`_`)) {
-        phoneInput.setCustomValidity(`Пожалуйста, укажите Ваш номер телефона согласно шаблону`);
-      } else {
-        phoneInput.setCustomValidity(``);
+      const validateName = () => {
+        const errorMsg = `Пожалуйста, укажите Ваше имя`;
+
+        if (nameValue.length === 0) {
+          nameInput.setCustomValidity(errorMsg);
+          nameErrorTip.classList.remove(`visually-hidden`);
+          nameErrorTip.textContent = errorMsg;
+        } else {
+          nameErrorTip.classList.add(`visually-hidden`);
+          nameErrorTip.textContent = ``;
+          nameInput.setCustomValidity(``);
+        }
+      };
+
+      const validatePhone = () => {
+        const errorMsg = `Пожалуйста, укажите Ваш номер телефона согласно шаблону`;
+
+        if (phoneValue.includes(`_`)) {
+          phoneInput.setCustomValidity(errorMsg);
+          phoneErrorTip.classList.remove(`visually-hidden`);
+          phoneErrorTip.textContent = errorMsg;
+        } else {
+          phoneErrorTip.classList.add(`visually-hidden`);
+          phoneErrorTip.textContent = ``;
+          phoneInput.setCustomValidity(``);
+        }
+      };
+
+      if (nameInput) {
+        validateName();
       }
+
+      validatePhone();
 
       if (form.checkValidity()) {
         $.magnificPopup.open({
@@ -50,7 +81,11 @@ export default () => {
 
         localStorage.setItem(`phone`, phoneValue);
       } else {
-        form.reportValidity();
+        if (nameInput) {
+          validateName();
+        }
+
+        validatePhone();
       }
     });
 

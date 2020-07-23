@@ -35,7 +35,7 @@
   @include regular-lh-170;
   margin-bottom: 32px;
 
-  width: 360px;
+  width: 100%;
 
   line-height: 26px;
   opacity: 0.87;
@@ -47,12 +47,17 @@
   align-items: center;
 }
 
-.callback-modal__form input[type="text"] {
+.callback-modal__form input[name="name"] {
   margin-bottom: 8px;
 }
 
 .callback-modal__form input[type="tel"] {
   margin-bottom: 24px;
+}
+
+.callback-modal__form input[name="name"]:invalid,
+.callback-modal__form input[type="tel"]:invalid {
+  margin-bottom: 8px;
 }
 
 .callback-modal__form button {

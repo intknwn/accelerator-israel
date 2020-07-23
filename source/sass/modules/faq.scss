@@ -71,12 +71,8 @@
 
     font-weight: bold;
     font-size: 28px;
-    background:
-      $active-gradient,
-      $yellow;
 
-    background-clip: text;
-    color: transparent;
+    color: $yellow;
   }
 }
 

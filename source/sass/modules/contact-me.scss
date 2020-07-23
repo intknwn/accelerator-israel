@@ -55,6 +55,10 @@
   width: 216px;
 }
 
+.contact-me__form .error-msg-tip {
+  top: 0;
+}
+
 @media (max-width: $tablet-width) {
   .contact-me__container {
     padding-left: 140px;

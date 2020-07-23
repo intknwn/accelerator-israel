@@ -28,6 +28,24 @@
   border-color: $yellow;
 }
 
+.form input[name="name"]:focus:invalid {
+  border-color: $invalid-color;
+}
+
+.form input[type="tel"]:invalid {
+  border-color: $invalid-color;
+}
+
+.form .error-msg-tip {
+  @include small;
+  color: $invalid-color;
+
+  position: relative;
+  top: -10px;
+
+  padding: 5px 25px 10px;
+}
+
 .form input::placeholder {
   @include placeholder;
 

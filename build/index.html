@@ -110,8 +110,9 @@
       <div class="contact-me__container">
         <h2>Хочу поехать!</h2>
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-        <form class="contact-me__form form" action="#">
+        <form class="form contact-me__form" action="#">
           <input type="tel" placeholder="Телефон" name="phone" required="">
+          <span class="error-msg-tip error-msg-tip--phone visually-hidden"></span>
           <button class="contact-me__submit-btn" type="submit">Перезвоните мне</button>
         </form>
       </div>
@@ -633,8 +634,14 @@
             <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
           </div>
           <form class="details__form form" action="#">
-            <input type="text" placeholder="Имя" name="name" required="">
-            <input type="tel" placeholder="Телефон" name="phone" required="">
+            <div class="details__input-wrapper">
+              <input type="text" placeholder="Имя" name="name" required="">
+              <span class="error-msg-tip error-msg-tip--name visually-hidden"></span>
+           </div>
+            <div class="details__input-wrapper">
+              <input type="tel" placeholder="Телефон" name="phone" required="">
+              <span class="error-msg-tip error-msg-tip--phone visually-hidden"></span>
+            </div>
             <button class="details__submit-btn" type="submit">Перезвоните мне</button>
           </form>
         </div>
@@ -686,7 +693,9 @@
       <p>Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
       <form class="callback-modal__form form" action="#">
         <input type="text" placeholder="Имя" name="name" required="">
+        <span class="error-msg-tip error-msg-tip--name visually-hidden"></span>
         <input type="tel" placeholder="Телефон" name="phone" required="">
+        <span class="error-msg-tip error-msg-tip--phone visually-hidden"></span>
         <button type="submit">Перезвоните мне</button>
         <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required="">
         <label for="agreement">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>

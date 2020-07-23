@@ -179,6 +179,8 @@
 
 .details__form {
   padding-left: 19px;
+  display: flex;
+  flex-direction: row;
 }
 
 .details__form-desc {
@@ -211,6 +213,15 @@
 
 .details__form button {
   width: 216px;
+}
+
+.details__form .error-msg-tip {
+  width: 216px;
+}
+
+.details__input-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: $tablet-width) {
