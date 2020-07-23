@@ -1,4 +1,4 @@
-import 'core-js/es/number';
+import 'core-js';
 import picturefill from 'picturefill';
 import createLifeSlider from './modules/life-slider';
 import createPopups from './modules/popups';
