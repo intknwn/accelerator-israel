@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'magnific-popup';
+import 'formdata-polyfill';
 
 export default () => {
   $(document).ready(() => {

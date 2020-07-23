@@ -23,9 +23,6 @@ module.exports = {
                 debug: true,
                 useBuiltIns: `entry`,
                 corejs: 3,
-                targets: {
-                  ie: `11`
-                }
               }]]
             }
           }

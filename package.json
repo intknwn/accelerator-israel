@@ -58,6 +58,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "del": "^4.1.1",
+    "formdata-polyfill": "^3.0.20",
     "imask": "^6.0.5",
     "jquery": "^3.5.1",
     "magnific-popup": "^1.1.0",
