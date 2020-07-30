@@ -37,6 +37,9 @@
         <button class="page-header__callback-btn" type="button">Заказать звонок</button>
       </div>
       <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
+      <button class="page-header__scroll-button" type="button">
+        <span class="visually-hidden">К следующему разделу</span>
+      </button>
     </div>
   </header>
   <main>
@@ -112,7 +115,7 @@
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
         <form class="form contact-me__form" action="#">
           <input type="tel" placeholder="Телефон" name="phone" required="">
-          <span class="error-msg-tip error-msg-tip--phone visually-hidden"></span>
+          <span class="error-msg-tip error-msg-tip--hidden error-msg-tip--phone visually-hidden"></span>
           <button class="contact-me__submit-btn" type="submit">Перезвоните мне</button>
         </form>
       </div>
@@ -256,7 +259,7 @@
         <div class="blogs__content-wrapper">
           <h2>#masaisrael</h2>
           <p>Познакомьтесь с программой от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.</p>
-          <button type="button">Cмотреть фото</button>
+          <a href="#">Cмотреть фото</a>
         </div>
       </div>
     </section>
@@ -272,7 +275,7 @@
             <h3 class="faq__question">Что такое грант на обучение?</h3>
             <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
           </li>
-          <li class="faq__list-item faq__list-item--active">
+          <li class="faq__list-item faq__list-item--shown">
             <h3 class="faq__question">Как определяется стоимость программы?</h3>
             <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
           </li>
@@ -636,11 +639,11 @@
           <form class="details__form form" action="#">
             <div class="details__input-wrapper">
               <input type="text" placeholder="Имя" name="name" required="">
-              <span class="error-msg-tip error-msg-tip--name visually-hidden"></span>
+              <span class="error-msg-tip error-msg-tip--hidden error-msg-tip--name visually-hidden"></span>
            </div>
             <div class="details__input-wrapper">
               <input type="tel" placeholder="Телефон" name="phone" required="">
-              <span class="error-msg-tip error-msg-tip--phone visually-hidden"></span>
+              <span class="error-msg-tip error-msg-tip--hidden error-msg-tip--phone visually-hidden"></span>
             </div>
             <button class="details__submit-btn" type="submit">Перезвоните мне</button>
           </form>
@@ -693,9 +696,9 @@
       <p>Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
       <form class="callback-modal__form form" action="#">
         <input type="text" placeholder="Имя" name="name" required="">
-        <span class="error-msg-tip error-msg-tip--name visually-hidden"></span>
+        <span class="error-msg-tip error-msg-tip--hidden error-msg-tip--name visually-hidden"></span>
         <input type="tel" placeholder="Телефон" name="phone" required="">
-        <span class="error-msg-tip error-msg-tip--phone visually-hidden"></span>
+        <span class="error-msg-tip error-msg-tip--hidden error-msg-tip--phone visually-hidden"></span>
         <button type="submit">Перезвоните мне</button>
         <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required="">
         <label for="agreement">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>

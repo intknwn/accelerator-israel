@@ -1,5 +1,5 @@
 @mixin promo {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -7,7 +7,7 @@
 }
 
 @mixin regular-lh-170 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -21,7 +21,7 @@
 }
 
 @mixin regular-lh-150 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -35,7 +35,7 @@
 }
 
 @mixin small {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -43,7 +43,7 @@
 }
 
 @mixin promo {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -51,7 +51,7 @@
 }
 
 @mixin placeholder {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -63,7 +63,7 @@
 }
 
 @mixin btn {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
@@ -78,7 +78,7 @@
 @mixin form-btn {
   box-sizing: border-box;
 
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", "Aerial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;

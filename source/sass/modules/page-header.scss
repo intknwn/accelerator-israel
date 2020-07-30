@@ -2,25 +2,21 @@
   height: 879px;
 
   background-image:
-    url("../img/scroll.svg"),
     url("../img/girl@1x.png"),
     url("../img/israel@1x.png"),
     url("../img/header_bg@1x.jpg");
   background-repeat: no-repeat;
   background-position:
-    50% 628px,
     center bottom -28px,
     51% 256px,
     0 0;
   background-size:
-    auto auto,
     1366px 906px,
     74% auto,
     100% 879px;
 
   @media (min-resolution: $retina-dppx) {
     background-image:
-      url("../img/scroll.svg"),
       url("../img/girl@2x.png"),
       url("../img/israel@2x.png"),
       url("../img/header_bg@2x.jpg");
@@ -28,6 +24,7 @@
 }
 
 .page-header__container {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -110,17 +107,46 @@
   text-transform: none;
 }
 
+.page-header__scroll-button {
+  position: absolute;
+  width: 76px;
+  height: 132px;
+
+  left: 50%;
+  bottom: 120px;
+
+  margin-left: -38px;
+
+  background-color: transparent;
+  background-image: url("../img/icon-scroll.svg");
+  background-size: 76px 132px;
+  background-position: center;
+  border: none;
+
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    width: 86px;
+    height: 142px;
+
+    bottom: 113px;
+
+    margin-left: -43px;
+
+    background-size: 86px 142px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .page-header {
     height: 879px;
 
     background-position:
-      50% 628px,
       center bottom -20px,
       51% 256px,
       bottom;
     background-size:
-      auto auto,
       cover,
       74% auto,
       cover;
@@ -137,17 +163,14 @@
     height: 587px;
 
     background-image:
-      url("../img/scroll.svg"),
       url("../img/girl-mobile@1x.png"),
       url("../img/israel@1x.png"),
       url("../img/header_bg@1x.jpg");
     background-position:
-      50% 415px,
       50% 32px,
       40% 204px,
       50% 32px;
     background-size:
-      auto,
       auto,
       107% auto,
       912px 587px;
@@ -157,11 +180,11 @@
     position: relative;
     flex-direction: column;
     align-items: flex-end;
-
-    height: auto;
   }
 
   .page-header__container {
+    height: 100%;
+
     padding-top: 16px;
     padding-right: 8px;
     padding-left: 0;
@@ -196,5 +219,13 @@
     text-align: right;
 
     background-position: left 0 bottom 4px;
+  }
+
+  .page-header__scroll-button {
+    bottom: 55px;
+
+    &:hover {
+      bottom: 47px;
+    }
   }
 }

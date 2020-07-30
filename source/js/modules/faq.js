@@ -1,16 +1,15 @@
 export default () => {
-  const headings = document.querySelectorAll(`.faq__question`);
+  const listItems = document.querySelectorAll(`.faq__list-item`);
 
-  headings.forEach((heading) => {
-    heading.classList.add(`faq__question--hidden`);
-    heading.addEventListener(`click`, (evt) => {
-      const target = evt.target;
-      if (target.classList.contains(`faq__question--shown`)) {
-        target.classList.remove(`faq__question--shown`);
-        target.classList.add(`faq__question--hidden`);
+  listItems.forEach((item) => {
+    item.classList.add(`faq__list-item--hidden`);
+    item.addEventListener(`click`, () => {
+      if (item.classList.contains(`faq__list-item--shown`)) {
+        item.classList.remove(`faq__list-item--shown`);
+        item.classList.add(`faq__list-item--hidden`);
       } else {
-        target.classList.remove(`faq__question--hidden`);
-        target.classList.add(`faq__question--shown`);
+        item.classList.remove(`faq__list-item--hidden`);
+        item.classList.add(`faq__list-item--shown`);
       }
     });
   });

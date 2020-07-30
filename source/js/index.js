@@ -5,6 +5,7 @@ import createPopups from './modules/popups';
 import createFaqAccordion from './modules/faq';
 import createReviewsSlider from './modules/reviews-slider';
 import createMasks from './modules/mask.js';
+import createScroll from './modules/scroll.js';
 import svg4everybody from 'svg4everybody';
 
 picturefill();
@@ -13,4 +14,5 @@ createPopups();
 createFaqAccordion();
 createReviewsSlider();
 createMasks();
+createScroll();
 svg4everybody();

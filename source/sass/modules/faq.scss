@@ -60,6 +60,8 @@
 
   counter-increment: question-number;
 
+  cursor: pointer;
+
   &::before {
     @include regular-lh-170;
     content: counter(question-number);
@@ -73,6 +75,33 @@
     font-size: 28px;
 
     color: $yellow;
+  }
+
+  &::after {
+    position: absolute;
+
+    display: none;
+
+    right: 36px;
+    top: 17px;
+  }
+
+  &--shown {
+    &::after {
+      content: url("../img/icon-arrow-up.svg");
+      display: block;
+    }
+  }
+
+  &--hidden {
+    &::after {
+      content: url("../img/icon-arrow-down.svg");
+      display: block;
+    }
+  }
+
+  &--hidden > p {
+    display: none;
   }
 }
 
@@ -93,35 +122,6 @@
   padding-left: 29px;
 
   letter-spacing: 0.002em;
-
-  cursor: pointer;
-
-  &::before {
-    position: absolute;
-
-    display: none;
-
-    right: 36px;
-    top: 17px;
-  }
-
-  &--shown {
-    &::before {
-      content: url("../img/icon-arrow-up.svg");
-      display: block;
-    }
-  }
-
-  &--hidden {
-    &::before {
-      content: url("../img/icon-arrow-down.svg");
-      display: block;
-    }
-  }
-
-  &--hidden + p {
-    display: none;
-  }
 }
 
 .faq__list-item p {
@@ -160,7 +160,7 @@
 
     min-height: auto;
 
-    padding-top: 11px;
+    padding-top: 15px;
     padding-right: 16px;
     padding-bottom: 20px;
     padding-left: 16px;
@@ -176,14 +176,14 @@
 
     font-size: 16px;
     line-height: 25px;
-
-    &::before {
-      right: 0;
-    }
   }
 
   .faq__list-item {
     min-height: 64px;
+
+    &::after {
+      right: 0;
+    }
   }
 
   .faq__container h2 {

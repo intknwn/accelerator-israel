@@ -36,9 +36,11 @@ export default () => {
         if (nameValue.length === 0) {
           nameInput.setCustomValidity(errorMsg);
           nameErrorTip.classList.remove(`visually-hidden`);
+          nameErrorTip.classList.remove(`error-msg-tip--hidden`);
           nameErrorTip.textContent = errorMsg;
         } else {
           nameErrorTip.classList.add(`visually-hidden`);
+          nameErrorTip.classList.add(`error-msg-tip--hidden`);
           nameErrorTip.textContent = ``;
           nameInput.setCustomValidity(``);
         }
@@ -47,12 +49,15 @@ export default () => {
       const validatePhone = () => {
         const errorMsg = `Пожалуйста, укажите Ваш номер телефона согласно шаблону`;
 
-        if (phoneValue.includes(`_`)) {
+        if (!phoneValue.match(/\+7 \((\d{3})\) (\d{3})\-(\d{2})\-(\d{2})/)) {
+          phoneInput.focus();
           phoneInput.setCustomValidity(errorMsg);
           phoneErrorTip.classList.remove(`visually-hidden`);
+          phoneErrorTip.classList.remove(`error-msg-tip--hidden`);
           phoneErrorTip.textContent = errorMsg;
         } else {
           phoneErrorTip.classList.add(`visually-hidden`);
+          phoneErrorTip.classList.add(`error-msg-tip--hidden`);
           phoneErrorTip.textContent = ``;
           phoneInput.setCustomValidity(``);
         }
